@@ -1,0 +1,30 @@
+body {
+  padding: 1rem;
+}
+
+.gridContainer {
+    
+   max-width: 500px;
+   margin: 0 auto;
+   margin-top: 100px;
+   
+}
+
+.gridRow {
+ 
+    display: flex;
+    
+}
+
+.gridColumn {
+
+padding: 1rem 0;
+flex: 1;
+border: black 1px solid;
+}
+
+.gridColumn:hover {
+    background-color: red;
+}
+
+
