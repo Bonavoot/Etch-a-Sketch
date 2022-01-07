@@ -1,39 +1,40 @@
-const container = document.querySelector(".gridContainer");
+const container = document.querySelector(".container");
+let cell;
+
+
+
 
 
 function makeGrid() {
 
-    for (let i = 0; i < 16; i++) {
+    let gridSize = prompt("Please enter grid size", 16);
+
+    for (let i = 0; i < gridSize; i++) {
 
         const gridRow = document.createElement('div');
         gridRow.classList.add("gridRow");
         container.appendChild(gridRow);
 
-        for (let j = 0; j < 16; j++) {
+
+        for (let j = 0; j < gridSize; j++) {
 
             const gridColumn = document.createElement('div');
             gridColumn.classList.add("gridColumn");
             gridRow.appendChild(gridColumn);
+            gridColumn.addEventListener("mouseover", () => {
+                gridColumn.style.backgroundColor = 'black';
+            });
         }
     }
 }
 
-let color = ["#3C9EE7", "E7993C"];
 
-document.querySelectorAll(".gridRow").forEach((item, i) => {
-    let mouseOverFunc = function () {
-        this.style.background =
-            color[Math.floor(Math.random() * color.length)];
-    };
-    item.onmouseover = mouseOverFunc;
-})
 
-document.querySelectorAll(".gridColumn").forEach((item, i) => {
-    let mouseOverFunc = function () {
-        this.style.background =
-            color[Math.floor(Math.random() * color.length)];
-    };
-    item.onmouseover = mouseOverFunc;
+// reset button 
+
+const reset = document.querySelector('.clear');
+reset.addEventListener('click', function () {
+    window.location.reload();
 })
 
 

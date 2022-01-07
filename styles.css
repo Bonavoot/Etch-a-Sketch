@@ -2,25 +2,26 @@ body {
   padding: 1rem;
 }
 
-.gridContainer {
-    
-   max-width: 500px;
+.container {
+  height: 500px;  
+  width: 500px;
    margin: 0 auto;
    margin-top: 100px;
-   
+   border: red solid 20px;
+   flex: 0 0 auto;
 }
 
 .gridRow {
  
     display: flex;
+    flex: 1;
     
 }
 
 .gridColumn {
-
-padding: 1rem 0;
+padding: 1rem 0 0;
 flex: 1;
-border: black 1px solid;
+border: lightgray 1px solid;
 }
 
 .gridColumn:hover {
